@@ -1,45 +1,5 @@
 <!-- jquery -->
-<% if (isCdnEnable('jquery')) {%>
-  <%- getCdnScript('jquery') %>
-<% } else { %>
-  <%- js('lib/jquery/jquery.min') %>
-<% } %>
-
-<% if (page.photos && page.photos.length) { %>
-  <% if (isCdnEnable('justified_gallery_js')) {%>
-    <%- getCdnScript('justified_gallery_js') %>
-  <% } else { %>
-    <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
-  <% } %>
-<% } %>
-
-<!-- clipboard -->
-<% if (is_post()){ %>
-  <% if (isCdnEnable('clipboard')) { %>
-    <%- getCdnScript('clipboard') %>
-  <% } else { %>
-    <%- js('lib/clipboard/clipboard.min') %>
-  <% } %>
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "<%= __('tooltip.copied') %>");
-      e.clearSelection();
-    })
-  })
-  </script>
-<% } %>
+<%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
 <%- js('js/main') %>
 <!-- search -->
 <% if (config.search && (page.search || page.type === "search")){ %>

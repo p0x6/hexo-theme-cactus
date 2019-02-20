@@ -58,6 +58,13 @@
     <% if (theme.direction && theme.direction === 'rtl') { %>
       <%- css('css/rtl') %>
     <% } %>
+    <%- js('lib/jquery/jquery.min') %>
+    <script type="text/javascript">
+      $('html').addClass('hidden');
+      $(document).ready(function() {    // EDIT: From Adam Zerner's comment below: Rather use load: $(window).on('load', function () {...});
+        $('html').show();  // EDIT: Can also use $('html').removeClass('hidden'); 
+        });  
+      </script>
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
       <% theme.rss = config.feed.path %>
