@@ -1,61 +1,61 @@
 nav:
-  home: Home
-  about: About
-  articles: Writing
-  tag: Tag
-  category: Category
-  projects: Projects
-  search: Search
+  home: home
+  about: about
+  articles: writing
+  tag: tag
+  category: category
+  projects: projects
+  search: search
 
 footer:
-  copyright: Copyright
+  copyright: copyright
 
 index:
-  find_me_on: Find me on
+  find_me_on: find me on
   enum_comma: ','
   enum_and: and
-  articles: Writing
-  projects: Projects
-  topics: Topics
-  most_recent: Most recent
+  articles: writing
+  projects: projects
+  topics: topics
+  most_recent: most recent
 
 post:
   desktop:
-    previous: Previous post
-    next: Next post
-    back_to_top: Back to top
-    share: Share post
+    previous: previous post
+    next: next post
+    back_to_top: back to top
+    share: share post
   mobile:
-    menu: Menu
-    toc: TOC
-    back_to_top: Top
-    share: Share
+    menu: menu
+    toc: toc
+    back_to_top: top
+    share: share
 
 search:
-  search: Search...
-  no_results: No results found.
+  search: search...
+  no_results: no results found.
 
 tag_cloud:
-  zero: No tags
+  zero: no tags
 
 pagination:
-  page: Page %d of %d
+  page: page %d of %d
 
 counter:
   tag_cloud:
-    zero: No tags
+    zero: no tags
     one: ""
     other: ""
 
   categories:
-    zero: No categories
+    zero: no categories
     one: ""
     other: ""
 
   archive_posts:
-    zero: No posts.
+    zero: no posts.
     one: ""
     other: ""
 
 comments:
-  no_js: Please enable JavaScript to view the comments.
+  no_js: please enable javaScript to view the comments.
