@@ -48,6 +48,9 @@
                 </ul>
             </div>
           </div>
+        <% } else if (page.type === 'cars') { %>
+          <%- page.content %>
+          <span class="h1">car projects</span>
         <% } else { %>
           <%- page.content %>
         <% } %>
