@@ -51,6 +51,18 @@
         <% } else if (page.type === 'cars') { %>
           <%- page.content %>
           <span class="h1">car projects</span>
+          <div id="categories">
+            <div class="category-list-title">
+                <ul class="post-list">
+                <% site.categories.findOne({name: "cars"}).posts.sort('title', 1).each(function(post) {%>
+                  <li class="post-item">
+                    <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
+                    <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+                  </li>
+                <% })%>
+                </ul>
+            </div>
+          </div>
         <% } else { %>
           <%- page.content %>
         <% } %>
