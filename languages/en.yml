@@ -58,4 +58,7 @@ counter:
     other: ""
 
 comments:
-  no_js: please enable javaScript to view the comments.
+  no_js: Please enable JavaScript to view the comments.
+
+tooltip:
+  copy_tip: Copy to clipboard!
